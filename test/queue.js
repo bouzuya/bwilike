@@ -8,7 +8,9 @@ describe('queue', function() {
 
     beforeEach(function(done) {
       q = queue();
-      done();
+      q.clear(function(err) {
+        done(err);
+      });
     });
 
     describe('length', function() {
@@ -48,10 +50,13 @@ describe('queue', function() {
 
     beforeEach(function(done) {
       q = queue();
-      q.enqueue(message, function(err, value) {
-        expect(err).to.not.be.ok();
-        expect(value).to.be.eql(message);
-        done();
+      q.clear(function(err) {
+        if (err) return done(err);
+        q.enqueue(message, function(err, value) {
+          expect(err).to.not.be.ok();
+          expect(value).to.be.eql(message);
+          done();
+        });
       });
     });
 
