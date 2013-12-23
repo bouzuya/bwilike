@@ -1,42 +1,37 @@
-doctype 5
-html(lang="ja")
-  head
-    meta(charset="UTF-8")
-    title status - bwilike.me
-  body
-    h1
-      a(href="/") bwilike.me
-    h2 status
-    table
-      tr
-        th key
-        th value
-      tr
-        td twitter id
-        td= user.id
-      tr
-        td github id
-        if user.github && user.github.id
-          td= user.github.id
-        else
-          td
-            a(href="/auth/github") set your github account
-      tr
-        td github likes
-        if user.languages
-          td= user.languages.join(',')
-        else
-          td please wait...
-      tr
-        td github last_updated
-        if user.last_fetched
-          td= user.last_fetched
-        else
-          td please wait...
-      tr
-        td twitter last_updated
-        if user.last_updated
-          td= user.last_updated
-        else
-          td please wait...
+extends layout.jade
+
+block content
+  h2 status
+  table
+    tr
+      th key
+      th value
+    tr
+      td twitter id
+      td= user.twitter.username
+    tr
+      td github id
+      if user.github && user.github.username
+        td= user.github.username
+      else
+        td
+          a(href="/auth/github") set your github account
+    tr
+      td github likes
+      if user.languages
+        td= user.languages.join(',')
+      else
+        td please wait...
+    tr
+      td github last_updated
+      if user.last_fetched
+        td= user.last_fetched
+      else
+        td please wait...
+    tr
+      td twitter last_updated
+      if user.last_updated
+        td= user.last_updated
+      else
+        td please wait...
 

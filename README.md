@@ -1,7 +1,7 @@
 bwilike
 ==============================================================================
 
-[![Build Status](https://travis-ci.org/bouzuya/bwilike?branch=master)](https://travis-ci.org/bouzuya/bwilike)
+[![Build Status](https://travis-ci.org/bouzuya/bwilike.png?branch=master)](https://travis-ci.org/bouzuya/bwilike)
 
 [bwilike.me][] is twitter bio (like:) updater.
 
