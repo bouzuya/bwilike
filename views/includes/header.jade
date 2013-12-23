@@ -1,3 +1,5 @@
 section#header
   h1
     a(href="/") bwilike.me
+  if user
+    p welcome, <a href="/status">#{user.id}</a>.
