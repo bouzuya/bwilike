@@ -8,11 +8,11 @@ block content
       th value
     tr
       td twitter id
-      td= user.id
+      td= user.twitter.username
     tr
       td github id
-      if user.github && user.github.id
-        td= user.github.id
+      if user.github && user.github.username
+        td= user.github.username
       else
         td
           a(href="/auth/github") set your github account
