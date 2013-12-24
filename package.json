@@ -7,7 +7,7 @@
     "start": "forever start --minUptime 1000 --spinSleepTime 1000 index.js",
     "stop": "forever stopall",
     "daily": "node lib/worker enqueueAll",
-    "worker": "node lib/worker fetchAndUpdate bouzuya",
+    "every-minute": "node lib/worker dequeue",
     "test": "NODE_ENV=test mocha -R spec"
   },
   "repository": {
