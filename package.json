@@ -1,12 +1,13 @@
 {
   "name": "bwilike",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "bwilike.me",
   "main": "index.js",
   "scripts": {
     "start": "forever start --minUptime 1000 --spinSleepTime 1000 index.js",
     "stop": "forever stopall",
-    "worker": "node lib/worker",
+    "daily": "node lib/worker enqueueAll",
+    "every-minute": "node lib/worker dequeue",
     "test": "NODE_ENV=test mocha -R spec"
   },
   "repository": {
