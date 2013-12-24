@@ -6,7 +6,8 @@
   "scripts": {
     "start": "forever start --minUptime 1000 --spinSleepTime 1000 index.js",
     "stop": "forever stopall",
-    "worker": "node lib/worker",
+    "daily": "node lib/worker enqueueAll",
+    "worker": "node lib/worker fetchAndUpdate bouzuya",
     "test": "NODE_ENV=test mocha -R spec"
   },
   "repository": {
