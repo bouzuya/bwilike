@@ -1,8 +1,9 @@
 extends layout.jade
 
 block content
-  h2 sign in with twitter
-  p <a href="/auth/twitter">sign in with twitter</a>
+  if !user
+    h2 sign in with twitter
+    p <a href="/auth/twitter">sign in with twitter</a>
   h2 what is bwilike.me ?
   p <a href="/">bwilike.me</a> updates your <a href="https://twitter.com/">twitter</a> bio (like:) based on <a href="https://github.com/">github</a> activity.
   h2 how to use
