@@ -2,4 +2,4 @@ section#header
   h1
     a(href="/") bwilike.me
   if user
-    p hello, #{user.twitter.username}. <a href="/status">your status</a>. not #{user.twitter.username}? <a href="/signout">signout</a>
+    nav hello, @#{user.twitter.username}. <a href="/status">check your status</a>. not #{user.twitter.username}? <a href="/signout">signout</a>

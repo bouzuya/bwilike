@@ -2,15 +2,16 @@ extends layout.jade
 
 block content
   if !user
-    h2 sign in with twitter
-    p <a href="/auth/twitter">sign in with twitter</a>
-  h2 what is bwilike.me?
-  p <a href="/">bwilike.me</a> updates your <a href="https://twitter.com/">twitter</a> bio (like:) based on <a href="https://github.com/">github</a> activity.
-  h2 how to use
-  ol
-    li sign in with twitter
-    li set your github account
-    li add "like:" to the end of your bio
-    li sleep until morning. zzz...
-    li "like:" is updated
-    li ([:-D
+    section
+      h1 sign in with twitter
+      p <a href="/auth/twitter">sign in with twitter</a>
+  section
+    h1 what is bwilike.me?
+    p <a href="/">bwilike.me</a> updates your <a href="https://twitter.com/">twitter</a> bio (like:) based on <a href="https://github.com/">github</a> activity.
+  section
+    h1 how to use
+    ol
+      li sign in with twitter.
+      li set your github account.
+      li sleep until morning. zzz...
+      li "like:" updated! ([:-D

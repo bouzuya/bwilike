@@ -34,7 +34,8 @@
     "github": "~0.1.12",
     "async": "~0.2.9",
     "moment": "~2.4.0",
-    "aws-sdk": "~2.0.0-rc4"
+    "aws-sdk": "~2.0.0-rc4",
+    "less-middleware": "~0.1.14"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
