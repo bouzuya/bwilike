@@ -2,4 +2,4 @@ section#header
   h1
     a(href="/") bwilike.me
   if user
-    p welcome, <a href="/status">@#{user.twitter.username}</a>.
+    nav こんにちは@#{user.twitter.username}さん。<a href="/status">更新状況</a> / <a href="/signout">サインアウト</a>

@@ -2,15 +2,18 @@ extends layout.jade
 
 block content
   if !user
-    h2 sign in with twitter
-    p <a href="/auth/twitter">sign in with twitter</a>
-  h2 what is bwilike.me ?
-  p <a href="/">bwilike.me</a> updates your <a href="https://twitter.com/">twitter</a> bio (like:) based on <a href="https://github.com/">github</a> activity.
-  h2 how to use
-  ol
-    li sign in with twitter
-    li set your github account
-    li add "like:" to the end of your bio
-    li sleep until morning. zzz...
-    li "like:" is updated
-    li ([:-D
+    section
+      h1 Twitterでサインイン
+      p(style="text-align:center;") <a class="button" href="/auth/twitter">Twitterでサインイン</a>
+  section
+    h1 bwilike.meってなに？
+    p <a href="/">bwilike.me</a>はあなたの<a href="https://twitter.com/">Twitter</a>プロフィールに<a href="https://github.com/">GitHub</a>のアクティビティに基づいた「like:」を追加します。
+    p 最近書いた本当に好きなプログラミング言語をTwitterプロフィールに自動設定できます。
+    p(style="text-align:center") <img alt="like: #javascript #css #ruby #shell" width="478" height="203" src="http://img.bwilike.me/example.png" />
+  section
+    h1 使いかた
+    p bwilike.meは3ステップで使えます。
+    ol
+      li bwilike.meにTwitterでサインインします。
+      li GitHubアカウントを設定します。
+      li 朝まで待つと「like:」が追加されます。([:-D
