@@ -2,26 +2,26 @@ extends layout.jade
 
 block content
   section
-    h1 status
+    h1 更新状況
     table
       tr
-        th Twitter id
+        th Twitterアカウント
         td <a href="https://twitter.com/#{user.twitter.username}">@#{user.twitter.username}</a>
       tr
-        th GitHub id
+        th GitHubアカウント
         if user.github && user.github.username
           td <a href="https://github.com/#{user.github.username}">#{user.github.username}</a>
         else
           td
             a(href="/auth/github") set your github account
       tr
-        th Likes
+        th Like:
         if user.languages
           td= user.languages.join(',')
         else
           td please wait...
       tr
-        th Last Updated
+        th 最終更新時間
         if user.last_updated
           td= user.last_updated
         else
