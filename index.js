@@ -1,3 +1,5 @@
+require('newrelic');
+
 module.exports = process.env.BWILIKE_COV
   ? require('./lib-cov/')
   : require('./lib/');
