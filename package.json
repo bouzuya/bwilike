@@ -37,8 +37,7 @@
     "newrelic": "^1.4.0"
   },
   "devDependencies": {
-    "expect.js": "~0.2.0",
-    "mocha": "~1.16.1",
-    "supertest": "~0.8.2"
+    "chai": "^1.9.1",
+    "mocha": "^1.18.2"
   }
 }
